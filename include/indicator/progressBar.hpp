@@ -31,14 +31,14 @@ namespace indicator
         public:
         ProgressBar()
         : bracket_l('['), fill('#'), remainder('-'), bracket_r(']'), width(31),
-        min(0), max(1), value(0) {};
+        min(0), max(1), value(0) {}
 
         ProgressBar(char _bracket_l, char _fill, char _remainder, char _bracket_r, int _width,
         float _min, float _max)
         : bracket_l(_bracket_l), fill(_fill), remainder(_remainder), bracket_r(_bracket_r), width(_width),
-        min(_min), max(_max), value(_min) {};
+        min(_min), max(_max), value(_min) {}
 
-        ~ProgressBar() { stop(); };
+        ~ProgressBar() { stop(); }
 
         // setter
         void setValue(float);

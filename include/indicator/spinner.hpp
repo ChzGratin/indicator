@@ -20,10 +20,12 @@ namespace indicator
 
         public:
         Spinner()
-        : anim({'-','\\','|','/'}), intv_ms(250) {};
+        : anim({'-','\\','|','/'}), intv_ms(250) {}
 
         Spinner(std::vector<char> spinnerAnimation, int frameInterval_ms)
-        : anim(spinnerAnimation), intv_ms(frameInterval_ms) {};
+        : anim(spinnerAnimation), intv_ms(frameInterval_ms) {}
+
+        ~Spinner() { stop(); }
         
         void play(); // play spinner animation
         void stop(); // stop spinner animation
